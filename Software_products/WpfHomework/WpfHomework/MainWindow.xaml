@@ -1,0 +1,83 @@
+﻿<Window x:Class="WpfHomework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHomework"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="700">
+    <Grid>
+
+        <TabControl Name="TabControl1">
+            <TabItem Header="Вкладка №1">
+                <TabItem.Content>
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0">
+                            <TextBlock Text="Наименование продукта" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                            <TextBox Name="product" Width="250" Margin="0,5,0,0"></TextBox>
+
+                            <TextBlock Text="Ф.И.О Куратора" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <TextBox Name="curator" Width="200" Margin="0,5,0,0"></TextBox>
+
+                            <TextBlock Text="Срок выполнения" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <DatePicker Name="date" Width="250" Margin="0,5,0,0"></DatePicker>
+
+                            <TextBlock Text="Язык программирования" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <TextBox Name="language" Width="80" Margin="0,5,0,0"></TextBox>
+
+                            <TextBlock Text="Наличие ТЗ" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <RadioButton GroupName="t" Content="Присутствует" Checked="t_true" Margin="0,0,80,0"></RadioButton>
+                                <RadioButton GroupName="t" Content="Отсутствует" Checked="t_false"></RadioButton>
+                            </StackPanel>
+
+                            <TextBlock Text="Комментарий" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <TextBox Name="comment" Width="250" Margin="0,5,0,0"></TextBox>
+
+                            <Button Content="Добавить информацию" Click="add_info" Width="150" Margin="0,25,0,0"></Button>
+
+                            <Button Content="Следующая вкладка" Width="150" Margin="0,15,0,0" Click="next_table"></Button>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1">
+                            <ListView Name="listView">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Path = [0]}"></GridViewColumn>
+                                        <GridViewColumn Header="Куратор" DisplayMemberBinding="{Binding Path = [1]}"></GridViewColumn>
+                                        <GridViewColumn Header="Срок" DisplayMemberBinding="{Binding Path = [2]}"></GridViewColumn>
+                                        <GridViewColumn Header="Язык" DisplayMemberBinding="{Binding Path = [3]}"></GridViewColumn>
+                                        <GridViewColumn Header="ТЗ" DisplayMemberBinding="{Binding Path = [4]}"></GridViewColumn>
+                                        <GridViewColumn Header="Комментарий" DisplayMemberBinding="{Binding Path = [5]}"></GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+
+                            </ListView>
+                        </StackPanel>
+                        
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            
+            <TabItem Header="Вкладка №2">
+                <TabItem.Content>
+                    <StackPanel>
+                        <Button Click="previous_table" Content="Предыдущая вкладка" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="150" Margin="0,350,0,0" ></Button>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+        
+        
+    </Grid>
+</Window>
