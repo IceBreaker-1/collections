@@ -1,0 +1,180 @@
+﻿<Window x:Class="WpfHomework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHomework"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="700">
+    <Grid>
+
+        <TabControl Name="TabControl1">
+            <TabItem Header="Вкладка №1">
+                <TabItem.Content>
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0">
+                            <TextBlock Text="Наименование продукта" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                            <TextBox Name="product" Width="250" Margin="0,5,0,0"></TextBox>
+
+                            <TextBlock Text="Ф.И.О Куратора" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <TextBox Name="curator" Width="200" Margin="0,5,0,0"></TextBox>
+
+                            <TextBlock Text="Срок выполнения" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <DatePicker Name="date" Width="250" Margin="0,5,0,0"></DatePicker>
+
+                            <TextBlock Text="Язык программирования" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <TextBox Name="language" Width="80" Margin="0,5,0,0"></TextBox>
+
+                            <TextBlock Text="Наличие ТЗ" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <RadioButton GroupName="t" Content="Присутствует" Checked="t_true" Margin="0,0,80,0"></RadioButton>
+                                <RadioButton GroupName="t" Content="Отсутствует" Checked="t_false"></RadioButton>
+                            </StackPanel>
+
+                            <TextBlock Text="Комментарий" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,0"></TextBlock>
+                            <TextBox Name="comment" Width="250" Margin="0,5,0,0"></TextBox>
+
+                            <Button Content="Добавить информацию" Click="add_info" Width="150" Margin="0,25,0,0"></Button>
+
+                            <Button Content="Следующая вкладка" Width="150" Margin="0,15,0,0" Click="next_table"></Button>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1">
+                            <ListView Name="listView">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Path = [0]}"></GridViewColumn>
+                                        <GridViewColumn Header="Куратор" DisplayMemberBinding="{Binding Path = [1]}"></GridViewColumn>
+                                        <GridViewColumn Header="Срок" DisplayMemberBinding="{Binding Path = [2]}"></GridViewColumn>
+                                        <GridViewColumn Header="Язык" DisplayMemberBinding="{Binding Path = [3]}"></GridViewColumn>
+                                        <GridViewColumn Header="ТЗ" DisplayMemberBinding="{Binding Path = [4]}"></GridViewColumn>
+                                        <GridViewColumn Header="Комментарий" DisplayMemberBinding="{Binding Path = [5]}"></GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+
+                            </ListView>
+                        </StackPanel>
+                        
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            
+            <TabItem Header="Вкладка №2">
+                <TabItem.Content>
+                    <StackPanel>
+                        <TextBlock Text="Список оказываемых услуг:" TextDecorations="Underline" FontSize="25" FontStyle="Italic" FontWeight="Bold"></TextBlock>
+                        <ScrollViewer Height="350">
+                            <StackPanel>
+                                <TextBlock Name="front_end_forCheck" Text="Front-end разработка" FontStyle="Italic" FontSize="15" TextDecorations="Underline" ></TextBlock>
+                                <TextBlock>
+                                    <Run Text="Описание: "></Run>
+                                    <Run Text="Создание пользовательского интерфейса на клиентской стороне веб-сайта или приложения"></Run>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Цена: " FontWeight="Bold"></Run>
+                                    <Run Text="78.000 руб." FontWeight="Bold" Foreground="Red" TextDecorations="Strikethrough"></Run>
+                                    <Run Text=" -> "></Run>
+                                    <Run Text="58.900 руб." FontWeight="Bold" Foreground="Green" FontStyle="Italic" TextDecorations="Underline"></Run>
+                                </TextBlock>
+                                <Button Name="front_end" Click="f_e" Content="Выбрать" Background="LightGreen" Width="80" HorizontalAlignment="Left" Margin="0,5,0,0"></Button>
+
+                                <TextBlock Name="Back_end_forCheck" Text="Back-end разработка" Margin="0,10,0,0" FontStyle="Italic" FontSize="15" TextDecorations="Underline"></TextBlock>
+                                <TextBlock>
+                                    <Run Text="Описание: "></Run>
+                                    <Run Text="Разработка серверной части сайта"></Run>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Цена: " FontWeight="Bold"></Run>
+                                    <Run Text="115.000 руб." FontWeight="Bold" TextDecorations="Underline" Foreground="Red"></Run>
+                                </TextBlock>
+                                <Button Name="back_end" Click="b_e" Content="Выбрать" Background="LightGreen" Width="80" Margin="0,5,0,0" HorizontalAlignment="Left"></Button>
+
+
+                                <TextBlock Name="software_module_forCheck" Text="Разработка программных модулей" Margin="0,10,0,0" FontSize="15" FontStyle="Italic" TextDecorations="Underline"></TextBlock>
+                                <TextBlock TextWrapping="Wrap">
+                                    <Run Text="Описание: "></Run>
+                                    <Run Text="Разработка программных модулей, формирующих структуру программного продукта, уменьшающих размер приложения и ускоряющих его работу"></Run>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Цена: " FontWeight="Bold"></Run>
+                                    <Run Text="150.000 руб." FontWeight="Bold" Foreground="Red" TextDecorations="Strikethrough"></Run>
+                                    <Run Text=" -> "></Run>
+                                    <Run Text="100.000 руб." FontWeight="Bold" Foreground="Green" TextDecorations="Underline"></Run>
+                                </TextBlock>
+                                <Button Name="software_module" Content="Выбрать" Click="p_m" Background="LightGreen" Width="80" Margin="0,5,0,0" HorizontalAlignment="Left"></Button>
+
+
+                                <TextBlock Name="android_app_forCheck" Text="Разработка Android приложений" Margin="0,10,0,0" FontSize="15" FontStyle="Italic" TextDecorations="Underline"></TextBlock>
+                                <TextBlock>
+                                    <Run Text="Описание: "></Run>
+                                    <Run Text="Разработка приложений для устройств на операционной системе Android"></Run>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Цена: " FontWeight="Bold"></Run>
+                                    <Run Text="180.000 руб." FontWeight="Bold" Foreground="Red" TextDecorations="Strikethrough"></Run>
+                                    <Run Text=" -> "></Run>
+                                    <Run Text="125.000 руб." FontWeight="Bold" Foreground="Green" TextDecorations="Underline"></Run>
+                                </TextBlock>
+                                <Button Name="android_app" Content="Выбрать" Click="android" Background="LightGreen" Width="80" Margin="0,5,0,0" HorizontalAlignment="Left"></Button>
+
+
+                                <TextBlock Name="ios_app_forCheck" Text="Разработка приложений для IOS" Margin="0,10,0,0" FontSize="15" TextDecorations="Underline" FontStyle="Italic"></TextBlock>
+                                <TextBlock>
+                                    <Run Text="Описание: "></Run>
+                                    <Run Text="Разработка приложений для устройств на операционной системе IOS"></Run>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Цена: " FontWeight="Bold"></Run>
+                                    <Run Text="195.000 руб." FontWeight="Bold" Foreground="Red" TextDecorations="Underline"></Run>
+                                </TextBlock>
+                                <Button Name="ios_app" Content="Выбрать" Click="ios" Background="LightGreen" Width="80" Margin="0,5,0,0" HorizontalAlignment="Left"></Button>
+
+                                <TextBlock Name="debug_forCheck" Text="Отладка программного обеспечения" Margin="0,10,0,0" FontStyle="Italic" TextDecorations="Underline" FontSize="15"></TextBlock>
+                                <TextBlock>
+                                    <Run Text="Описание: "></Run>
+                                    <Run Text="Локализация, анализ и устранение ошибок в программном обеспечении"></Run>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Цена: " FontWeight="Bold"></Run>
+                                    <Run Text="75.000 руб." FontWeight="Bold" Foreground="Red" TextDecorations="Underline"></Run>
+                                </TextBlock>
+                                <Button Name="debug" Content="Выбрать" Click="debugging" Background="LightGreen" Width="80" Margin="0,5,0,0" HorizontalAlignment="Left"></Button>
+
+                            </StackPanel>
+                        </ScrollViewer>
+                        <Separator></Separator>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="К оплате: " FontWeight="Bold"></TextBlock>
+                            <TextBlock Name="sum" Text="0" FontWeight="Bold" Foreground="Red" TextDecorations="Underline" FontStyle="Italic"></TextBlock>
+                            <TextBlock Text=" руб." FontWeight="Bold" Foreground="Red" TextDecorations="Underline" FontStyle="Italic"></TextBlock>
+                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            
+                            <Button Name="document" Click="create_check" Grid.Column="0" Content="Сформировать чек" HorizontalAlignment="Left" Margin="0,5,0,0" Width="150"></Button>
+                            <Button Grid.Column="1" Click="previous_table" Content="Предыдущая вкладка" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"></Button>
+                        </Grid>
+                        
+
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+        
+        
+    </Grid>
+</Window>
