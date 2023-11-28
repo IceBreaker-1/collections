@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\bin\Debug\WpfHomeworkNew.exe.config
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\bin\Debug\WpfHomeworkNew.exe
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\bin\Debug\WpfHomeworkNew.pdb
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\App.g.cs
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew_MarkupCompile.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew_MarkupCompile.lref
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew.g.resources
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew.Properties.Resources.resources
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew.exe
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkNew\WpfHomeworkNew\obj\Debug\WpfHomeworkNew.pdb
