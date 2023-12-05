@@ -1,0 +1,134 @@
+﻿<Window x:Class="WpfHomeworkNew.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHomeworkNew"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" >
+    <Grid>
+        <TabControl>
+            <TabItem Header="Задание №1">
+                <TabItem.Content>
+                    <Grid Name="mainWindow1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="93*"/>
+                            <ColumnDefinition Width="701*"/>
+                        </Grid.ColumnDefinitions>
+                        <Menu Height="20" VerticalAlignment="Top" Grid.ColumnSpan="2">
+                            <MenuItem MouseEnter="background_color" MouseLeave="status_default" Header="Цвет фона">
+                                <RadioButton MouseEnter="radio_red_status_E" MouseLeave="status_default" Name="radio_red" GroupName="radio_background" Content="Красный" Checked="red_background"></RadioButton>
+                                <RadioButton MouseEnter="radio_white_status_E" MouseLeave="status_default" Name="radio_white" GroupName="radio_background" Content="Белый" Checked="white_background"></RadioButton>
+                                <RadioButton MouseEnter="radio_blue_status_E" MouseLeave="status_default" Name="radio_blue" GroupName="radio_background" Content="Голубой" Checked="blue_background"></RadioButton>
+                            </MenuItem>
+
+                            <MenuItem MouseEnter="developer_status" MouseLeave="status_default" Header="О разрабочике" Click="about_developer"></MenuItem>
+
+                            <MenuItem MouseEnter="close_status" MouseLeave="status_default" Header="Закрыть окно" Click="close_window"></MenuItem>
+
+                            <MenuItem MouseEnter="toolBar_status" MouseLeave="status_default" Header="ToolBar">
+                                <ToolBar>
+                                    <TextBlock MouseEnter="background_color" MouseLeave="status_default" Text="Цвет фона"></TextBlock>
+                                    <ComboBox>
+                                        <RadioButton MouseEnter="radio_red_status_E" MouseLeave="status_default" Name="radio_tool_red" GroupName="radio_background" Content="Красный" Checked="red_background"></RadioButton>
+                                        <RadioButton MouseEnter="radio_white_status_E" MouseLeave="status_default" Name="radio_tool_white" GroupName="radio_background" Content="Белый" Checked="white_background"></RadioButton>
+                                        <RadioButton MouseEnter="radio_blue_status_E" MouseLeave="status_default" Name="radio_tool_blue" GroupName="radio_background" Content="Голубой" Checked="blue_background"></RadioButton>
+                                    </ComboBox>
+
+                                    <Separator></Separator>
+                                    <Button MouseEnter="developer_status" MouseLeave="status_default" Content="О разрабочике" Margin="10,0,0,0" Click="about_developer"></Button>
+                                    <Separator></Separator>
+                                    <Button MouseEnter="close_status" MouseLeave="status_default" Content="Закрыть окно" Margin="10,0,0,0" Click="close_window"></Button>
+                                </ToolBar>
+                            </MenuItem>
+                        </Menu>
+
+                        <StatusBar VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+                            <StatusBarItem>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Информация об элементе: "></TextBlock>
+                                    <TextBlock Name="status" Text="Элемент не выбран"></TextBlock>
+                                </StackPanel>
+                            </StatusBarItem>
+                        </StatusBar>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Header="Задание №2">
+                <TabItem.Content>
+                    <Grid>
+                        <StackPanel>
+                            <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                                <Expander Grid.Column="0" Grid.Row="0" Header="Цвет кисти" HorizontalAlignment="Left">
+                                    <WrapPanel Orientation="Horizontal" Width="90">
+                                        <Button Click="red_brush" Background="Red" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                        <Button Click="blue_brush" Background="Blue" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                        <Button Click="white_brush" Background="White" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                        <Button Click="yellow_brush" Background="Yellow" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                        <Button Click="aqua_brush" Background="Aqua" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                        <Button Click="bisque_brush" Background="Bisque" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                        <Button Click="chocolate_brush" Background="Chocolate" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                        <Button Click="crimson_brush" Background="Crimson" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                        <Button Click="violet_brush" Background="Violet" Width="25" Height="25" Margin="2" BorderBrush="Black"></Button>
+                                    </WrapPanel>
+                                </Expander>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Grid.Row="0">
+                                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="Размер кисти: " TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="Underline"></TextBlock>
+                                    <TextBlock Name="size_b" Text="0"></TextBlock>
+                                </StackPanel>
+                                <Slider Name="sl_for_size" Grid.Column="1" Grid.Row="0" Minimum="0" Maximum="100" ValueChanged="brush_size"></Slider>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Grid.Row="0">
+                                <Expander Header="Режим работы">
+                                    <StackPanel>
+                                        <RadioButton GroupName="mode" Content="Рисование" Checked="ink_mode"></RadioButton>
+                                        <RadioButton GroupName="mode" Content="Редактирование" Checked="select_mode"></RadioButton>
+                                        <RadioButton GroupName="mode" Content="Удаление" Checked="eraseByPoint_mode"></RadioButton>
+                                    </StackPanel>
+                                </Expander>
+                            </StackPanel>
+                        </Grid>
+                            <StackPanel Background="Black" Height="1" Margin="0,2,0,0"></StackPanel>
+
+                            <InkCanvas Name="canvas_for_paint">
+                                <InkCanvas.DefaultDrawingAttributes>
+                                    <DrawingAttributes Color="Black" Height="10" Width="10"></DrawingAttributes>
+                                </InkCanvas.DefaultDrawingAttributes>
+                            </InkCanvas>
+                        </StackPanel>
+                        <StatusBar VerticalAlignment="Bottom">
+                            <StatusBarItem>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Текущий цвет кисти: "></Label>
+                                    <TextBlock Name="color_info" Background="Black" Width="25" Height="25" IsEnabled="True"></TextBlock>
+
+                                    <Label Content="Текущий размер кисти: " Margin="25,0,0,0"></Label>
+                                    <Label Name="size_info" Content="0"></Label>
+
+                                    <Label Content="Текущий режим работы: " Margin="25,0,0,0"></Label>
+                                    <TextBlock Name="mode_info" Text="Рисование" FontWeight="Bold" FontStyle="Italic" TextDecorations="Underline" VerticalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </StatusBarItem>
+                        </StatusBar>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+</Window>
