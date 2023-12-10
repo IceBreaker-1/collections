@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\bin\Debug\WpfHomeworkResources.exe.config
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\bin\Debug\WpfHomeworkResources.exe
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\bin\Debug\WpfHomeworkResources.pdb
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\App.g.cs
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources_MarkupCompile.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources_MarkupCompile.lref
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources.g.resources
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources.Properties.Resources.resources
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources.exe
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\WpfHomeworkResources.pdb
+C:\Users\User\Desktop\Visual Studio projects\WpfHomeworkResources\WpfHomeworkResources\obj\Debug\App.baml
