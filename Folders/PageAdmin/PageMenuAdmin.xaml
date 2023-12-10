@@ -1,0 +1,19 @@
+﻿<Page x:Class="WpfHomeworkNew.PageAdmin.PageMenuAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfHomeworkNew.PageAdmin"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="350"
+      Title="Страница Администратора">
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Button Style="{StaticResource button_admin}" Content="Добавить студента"></Button>
+        <Button Style="{StaticResource button_admin}" Content="Добавить оценку"></Button>
+        <Button Style="{StaticResource button_admin}" Content="Список студентов"></Button>
+        <Button Style="{StaticResource button_admin}" Content="Редактирование оценки"></Button>
+        <Button Style="{StaticResource button_admin}" Content="Удалить студента"></Button>
+        <Button Style="{StaticResource button_admin}" Content="MVC"></Button>
+    </StackPanel>
+</Page>
