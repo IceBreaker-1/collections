@@ -1,0 +1,58 @@
+﻿<Window x:Class="WpfAppAuthorization.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppAuthorization"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="620" Width="800">
+    <Grid>
+        <StackPanel Margin="5">
+            <TextBlock Text="Персональная информация" FontWeight="Bold" Margin="5" FontSize="15"></TextBlock>
+
+            <TextBlock Text="Фамилия" FontWeight="Bold" Margin="5"></TextBlock>
+            <TextBox Width="250" HorizontalAlignment="Left"></TextBox>
+
+            <TextBlock Text="Имя" FontWeight="Bold" Margin="5"></TextBlock>
+            <TextBox Width="250" HorizontalAlignment="Left"></TextBox>
+
+            <TextBlock Text="E-mail" FontWeight="Bold" Margin="5"></TextBlock>
+            <TextBox Width="250" HorizontalAlignment="Left"></TextBox>
+
+            <TextBlock Text="Пароль" FontWeight="Bold" Margin="5"></TextBlock>
+            <PasswordBox Width="250" HorizontalAlignment="Left"></PasswordBox>
+
+            <TextBlock Text="Повторите пароль" FontWeight="Bold" Margin="5"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <PasswordBox Width="250" HorizontalAlignment="Left"></PasswordBox>
+                <Label Content="Минимальная длина пароля 8 символов" BorderBrush="Black" BorderThickness="1" Margin="25,0,0,0"></Label>
+            </StackPanel>
+
+            <TextBlock Text="Кодовое слово" FontWeight="Bold" Margin="5" FontSize="15"></TextBlock>
+            
+            <TextBlock Text="Кодовое слово" FontWeight="Bold" Margin="5"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Height="25" VerticalAlignment="Top" Width="250" HorizontalAlignment="Left"></TextBox>
+                <StackPanel Margin="12,0,0,0">
+                    <TextBlock Text="Условие пароля 1"></TextBlock>
+                    <TextBlock Text="Условие пароля 2"></TextBlock>
+                    <TextBlock Text="Условие пароля 3"></TextBlock>
+                    <TextBlock Text="Условие пароля 4"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+
+            <TextBlock Text="Секретный вопрос для восстановления пароля" FontWeight="Bold" Margin="5" FontSize="15"></TextBlock>
+            
+            <TextBlock Text="Секретный вопрос" FontWeight="Bold" Margin="5"></TextBlock>
+            <ComboBox Width="250" HorizontalAlignment="Left" Margin="5"></ComboBox>
+
+            <TextBlock Text="Ответ на вопрос" FontWeight="Bold" Margin="5"></TextBlock>
+            <TextBox Width="250" HorizontalAlignment="Left"></TextBox>
+
+            <CheckBox Content="Согласен с условиями" Margin="5"></CheckBox>
+
+            <Button Content="Войти" Width="250" HorizontalAlignment="Left" Margin="5"></Button>
+            
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\bin\Debug\WpfAppAuthorization.exe.config
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\bin\Debug\WpfAppAuthorization.exe
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\bin\Debug\WpfAppAuthorization.pdb
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\App.g.cs
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization_MarkupCompile.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization_MarkupCompile.lref
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization.g.resources
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization.Properties.Resources.resources
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization.exe
+C:\Users\User\Desktop\Visual Studio projects\WpfAppAuthorization\WpfAppAuthorization\obj\Debug\WpfAppAuthorization.pdb
